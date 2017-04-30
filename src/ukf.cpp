@@ -66,6 +66,8 @@ UKF::UKF() {
   Hint: one or more values initialized above might be wildly off...
   */
   
+  is_initialized_ = false;
+
   n_x_ = 5;
   
   n_aug_ = 7;
