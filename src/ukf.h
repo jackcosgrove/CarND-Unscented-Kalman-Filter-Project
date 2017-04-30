@@ -31,6 +31,12 @@ public:
 
   ///* predicted sigma points matrix
   MatrixXd Xsig_pred_;
+  
+  ///* laser measure noise covariance matrix
+  MatrixXd R_las_;
+  
+  ///* radar measure noise covariance matrix
+  MatrixXd R_rad_;
 
   ///* time when the state is true, in us
   long long time_us_;
@@ -73,6 +79,9 @@ public:
 
   ///* the current NIS for laser
   double NIS_laser_;
+  
+  ///* value to use when values may be close to zero
+  const float min_value_ = 0.0001;
 
   /**
    * Constructor
